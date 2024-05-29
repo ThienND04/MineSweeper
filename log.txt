@@ -1,0 +1,610 @@
+start
+Arg[1]: (null)
+Success
+create instance
+Mines: 
+    0 6
+    6 9
+    9 5
+    4 4
+    3 9
+    5 4
+    5 2
+    4 1
+    4 8
+    1 7
+Instance add: 00739048
+Success load font.
+set window game in controller
+Grid size: 30
+seted window game in controller
+cpn size: 100
+WindowGameAdd: 00739048
+Instance add: 00739048
+Instance add: 00739048
+Instance add: 00739048
+Same
+Window size: 10 10
+Handling button event
+512
+Handling button event
+512
+Handling button event
+770
+Handling button event
+512
+Handling button event
+512
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1025
+Handling button event
+1026
+Handling button click
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1025
+Handling button event
+1026
+Handling button click
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1025
+Handling button event
+1026
+Handling button click
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1025
+Handling button event
+1026
+Handling button click
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1025
+Handling button event
+1026
+Handling button click
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1025
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1026
+Handling button click
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1025
+Handling button event
+1026
+Handling button click
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1025
+Handling button event
+1026
+Handling button click
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1025
+Handling button event
+1024
+Handling button event
+1026
+Handling button click
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1025
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1026
+Handling button click
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1025
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1026
+Handling button click
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1025
+Handling button event
+1024
+Handling button event
+1026
+Handling button click
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1025
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1026
+Handling button click
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1025
+Handling button event
+1024
+Handling button event
+1026
+Handling button click
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1025
+Handling button event
+1026
+Handling button click
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1025
+Handling button event
+1026
+Handling button click
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1025
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1026
+Handling button click
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1025
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1026
+Handling button click
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1025
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1026
+Handling button click
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1025
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1026
+Handling button click
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1025
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1026
+Handling button click
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1025
+Handling button event
+1026
+Handling button click
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1025
+Handling button event
+1026
+Handling button click
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1025
+Handling button event
+1026
+Handling button click
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1025
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1026
+Handling button click
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+512
+Handling button event
+512
+Handling button event
+770
+Handling button event
+512
+Handling button event
+512
+Handling button event
+1024
+Handling button event
+512
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+1024
+Handling button event
+512
+Handling button event
+512
