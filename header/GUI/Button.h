@@ -12,7 +12,7 @@ public:
     Button(SDL_Renderer *renderer);
     Button(SDL_Renderer *renderer, SDL_Rect rect);
     ~Button();
-    bool handleEvent(SDL_Event *event);
+    // bool handleEvent(SDL_Event *event);
     virtual bool isInRect(int x, int y) override;
     virtual void render() override;
     bool isWithinBounds();

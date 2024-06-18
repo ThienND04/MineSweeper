@@ -33,19 +33,21 @@ void GameController::createCells() {
             if ((i + j) % 2 == 0) btn->setColor(CL_DARK_GREEN);
             else btn->setColor(CL_LIGHT_GREEN);
 
-            btn->setText(std::to_string(game->getNumber({i, j})).c_str(), CL_BLACK);
             btn->setTextVisible(false);
             
             btn->setHandleLeftClick([=](){
-                printf("Left click\n");
                 Game *game = GameController::getInstance()->getGame();
                 game->openCell({i, j});
-                printf("Left click ok\n");
             });
 
             btn->setHandleRightClick([=](){
                 Game *game = GameController::getInstance()->getGame();
                 game->maskCell({i, j});
+            });
+
+            btn->setHandleMiddleClick([=](){
+                Game *game = GameController::getInstance()->getGame();
+                game->autoOpen({i, j});
             });
             cells[i].push_back(btn);
             windowGame->getComponents()->push_back(btn);
@@ -82,6 +84,15 @@ void GameController::setWindowGame(WindowGame *windowGame) {
 }
 
 void GameController::updateGUI() {
+    if (game -> isStarted()) {
+        for (int i = 0; i < game->getNRow(); i ++) {
+            for (int j = 0; j < game->getNCol(); j ++) {
+                Button *btn = (Button *) cells[i][j];
+                btn->setText(std::to_string(game->getNumber({i, j})).c_str(), CL_BLACK);
+            }
+        }
+    }
+
     // cells
     for (int i = 0; i < game->getNRow(); i ++) {
         for (int j = 0; j < game->getNCol(); j ++) {
@@ -89,7 +100,11 @@ void GameController::updateGUI() {
             if (game->getCellStatus({i, j}) == CellStatus::OPENDED) {
                 if (game->getCellType({i, j}) == CellType::MINE_CELL) {
                     btn->setColor(CL_PURPLE);
-                } else btn->setTextVisible(true);
+                } else {
+                    if ((i + j) % 2 == 0) btn->setColor(CL_DARK_BROWN);
+                    else btn->setColor(CL_LIGHT_BROWN);
+                    btn->setTextVisible(true);
+                }
             } else if (game->getCellStatus({i, j}) == CellStatus::MASKED) {
                 btn->setTextVisible(false);
                 btn->setColor(CL_RED);

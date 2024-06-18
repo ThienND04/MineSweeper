@@ -16,23 +16,26 @@ Button::~Button() {
     
 }
 
-bool Button::handleEvent(SDL_Event *event) {
-    if (! isEnable()) return false;
-    // printf ("Handling button event\n");
-    std::cout << event->type << std::endl;
-    if (event->type == SDL_MOUSEBUTTONUP) {
-        // printf ("Handling button click\n");
-        switch (event->button.button) {
-            case (SDL_BUTTON_LEFT):
-                handleLeftClick();
-                break;
-            case (SDL_BUTTON_RIGHT):
-                handleRightClick();
-                break;
-        }
-    }
-    return true;
-}
+// bool Button::handleEvent(SDL_Event *event) {
+//     if (! isEnable()) return false;
+//     // printf ("Handling button event\n");
+//     std::cout << event->type << std::endl;
+//     if (event->type == SDL_MOUSEBUTTONUP) {
+//         // printf ("Handling button click\n");
+//         switch (event->button.button) {
+//             case (SDL_BUTTON_LEFT):
+//                 handleLeftClick();
+//                 break;
+//             case (SDL_BUTTON_RIGHT):
+//                 handleRightClick();
+//                 break;
+//             case (SDL_BUTTON_MIDDLE):
+//                 handleMiddleClick();
+//                 break;
+//         }
+//     }
+//     return true;
+// }
 
 bool Button::isWithinBounds() {
     int x, y;
@@ -62,5 +65,6 @@ bool Button::isInRect(int x, int y) {
 }
 
 void Button::setText(std::string text, SDL_Color textColor) {
+    if(this->text != NULL) this->text->free();
     this->text = TextureCreator::getInstance()->createTexture(text, textColor);
 }

@@ -13,13 +13,15 @@ public:
     ~Game();
 
     void reset();
-    void randomize();
+    void randomize(Position firstOpen);
+    void autoOpen(Position pos);
     void openCell(Position pos);
     void maskCell(Position pos);
     void updateGameStatus();
     int getNumber(Position pos);
     
 private:
+    bool started = false;
     int nRow;
     int nCol;
     int numMines;
@@ -30,6 +32,14 @@ private:
 
 // getter and setter
 public: 
+    void setStarted(bool started) {
+        this -> started = started;
+    }
+
+    bool isStarted() {
+        return started;
+    }
+
     int getNRow() const {
         return nRow;
     }
@@ -81,6 +91,10 @@ public:
 
     int getNumFlag() const {
         return numFlag;
+    }
+
+    bool isValidPos(Position pos) {
+        return pos.row >= 0 && pos.col >= 0 && pos.row < nRow && pos.col < nCol;
     }
 
 protected:
