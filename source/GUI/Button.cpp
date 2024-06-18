@@ -1,13 +1,15 @@
 #include "Button.h"
 #include<SDL_image.h>
 
-Button::Button(SDL_Renderer *renderer) {
-    this->renderer = renderer;
+Button::Button(SDL_Renderer *renderer) :
+    EventReceiver(renderer)
+{
 }
 
-Button::Button(SDL_Renderer *renderer, SDL_Rect rect) {
+Button::Button(SDL_Renderer *renderer, SDL_Rect rect) :
+    EventReceiver(renderer)
+{
     this->rect = rect;
-    this->renderer = renderer;
 }
 
 Button::~Button() {
@@ -15,10 +17,11 @@ Button::~Button() {
 }
 
 bool Button::handleEvent(SDL_Event *event) {
-    printf ("Handling button event\n");
+    if (! isEnable()) return false;
+    // printf ("Handling button event\n");
     std::cout << event->type << std::endl;
     if (event->type == SDL_MOUSEBUTTONUP) {
-        printf ("Handling button click\n");
+        // printf ("Handling button click\n");
         switch (event->button.button) {
             case (SDL_BUTTON_LEFT):
                 handleLeftClick();
@@ -28,6 +31,7 @@ bool Button::handleEvent(SDL_Event *event) {
                 break;
         }
     }
+    return true;
 }
 
 bool Button::isWithinBounds() {
@@ -38,7 +42,10 @@ bool Button::isWithinBounds() {
 
 void Button::render() {
     if (isVisible()) {
-        SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
+        if (isWithinBounds()) {
+            // thay cho nay = -5
+            SDL_SetRenderDrawColor(renderer, hoverColor.r, hoverColor.g, hoverColor.b, hoverColor.a);
+        } else SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
         SDL_RenderFillRect(renderer, &rect);
         if (text != NULL && isTextVisible()) {
             // printf("Khong phai NULL\n");

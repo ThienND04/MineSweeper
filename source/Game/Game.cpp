@@ -15,6 +15,7 @@ Game::~Game(){
 }
 
 void Game::reset() {
+	gameStatus = GameStatus::GAME_RUNNING;
 	numFlag = numMines;
 	board = std::vector<std::vector<CellType>>(nRow, std::vector<CellType>(nCol, EMPTY_CELL));
 	boardStatus = std::vector<std::vector<CellStatus>>(nRow, std::vector<CellStatus>(nCol, CLOSED));
@@ -41,24 +42,42 @@ void Game::openCell(Position pos) {
 	if (getCellStatus(pos) == CellStatus::CLOSED) {
 		setCellStatus(pos, CellStatus::OPENDED);
 		// if chua item 
+		
 	}
 }
 
 // Đánh dấu một ô nếu chưa bị đánh dấu và ngược lại. 
 void Game::maskCell(Position pos) {
 	if (getCellStatus(pos) == CellStatus::CLOSED) {
-		setCellStatus(pos, CellStatus::MASKED);
+		if (numFlag > 0) {
+			setCellStatus(pos, CellStatus::MASKED);
+			numFlag --;
+		}
 	} else if (getCellStatus(pos) == CellStatus::MASKED) {
 		setCellStatus(pos, CellStatus::CLOSED);
+		numFlag ++;
 	}
 }
 
 void Game::updateGameStatus() {
+	// printf("Row, Col: %d %d\n", nRow, &nCol);
+	int cntOpen = 0;
 	for (int r = 0; r < nRow; r ++) {
 		for (int c = 0; c < nCol; c ++) {
-			
+			Position pos = {r, c};
+			if (getCellStatus(pos) == CellStatus::OPENDED) {
+				cntOpen ++;
+				if (getCellType(pos) == CellType::MINE_CELL) {
+					setGameStatus(GameStatus::GAME_OVER);
+				} 
+			}
+			// if (getCellStatus(pos) == CellStatus::OPENDED) {
+			// 	int tp = getCellType(pos);
+			// 	printf("%d %d: %d\n", r, c, tp);
+			// }
 		}
 	}
+	if (cntOpen >= nRow * nCol - numMines) gameStatus = GameStatus::GAME_WON;
 }
 
 int Game::getNumber(Position pos) {

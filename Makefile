@@ -20,6 +20,15 @@ INCLUDE_PATHS += -Iheader/Test
 INCLUDE_PATHS += -Iheader/Controller
 INCLUDE_PATHS += -Iheader
 
+INCLUDE_PATHS_H = include/SDL2/*.h
+INCLUDE_PATHS_H += header/GUI/*.h
+INCLUDE_PATHS_H += header/Game/*.h
+INCLUDE_PATHS_H += header/Items/*.h
+INCLUDE_PATHS_H += header/Window/*.h
+INCLUDE_PATHS_H += header/Test/*.h
+INCLUDE_PATHS_H += header/Controller/*.h
+INCLUDE_PATHS_H += header/*.h
+
 LIBRARY_PATH = -Llib
 
 #COMPILER_FLAGS specifies the additional compilation options we're using
@@ -33,6 +42,7 @@ LINKER_FLAGS = -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf
 
 #OBJ_NAME specifies the name of our exectuable
 OBJ_NAME = main.exe
+OBJ_FILE = obj.o
 
 #This is the target that compiles our executable
 all : $(OBJS)
@@ -42,3 +52,15 @@ run:
 	.\main.exe 
 test: 
 	.\main.exe test
+compile: 
+	$(CC) -c ${INCLUDE_PATHS_H}
+	${CC} -o cpl.oo *.o
+clean: 
+	del .\include\SDL2\*.gch
+	del .\header\GUI\*.gch
+	del .\header\Game\*.gch
+	del .\header\Items\*.gch
+	del .\header\Window\*.gch
+	del .\header\Test\*.gch
+	del .\header\Controller\*.gch
+	del .\header\*.gch
