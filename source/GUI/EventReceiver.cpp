@@ -17,6 +17,9 @@ bool EventReceiver::handleEvent(SDL_Event *event) {
             case (SDL_BUTTON_RIGHT):
                 handleRightClick();
                 break;
+            case (SDL_BUTTON_MIDDLE):
+                handleMiddleClick();
+                break;
         }
     }
     return true;

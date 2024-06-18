@@ -15,20 +15,26 @@ Game::~Game(){
 }
 
 void Game::reset() {
+	started = false;
 	gameStatus = GameStatus::GAME_RUNNING;
 	numFlag = numMines;
 	board = std::vector<std::vector<CellType>>(nRow, std::vector<CellType>(nCol, EMPTY_CELL));
 	boardStatus = std::vector<std::vector<CellStatus>>(nRow, std::vector<CellStatus>(nCol, CLOSED));
-	randomize();
+	// randomize({0, 0});
 }
 
-void Game::randomize() {
+// randomize board with first open cell, around it does not have any mines.
+void Game::randomize(Position firstOpen) {
 	std::vector<Position>tmp;
 	for (int r = 0; r < nRow; r ++) {
 		for (int c = 0; c < nCol; c ++) {
-			tmp.push_back({r, c});
+			if (std::max(abs(r - firstOpen.row), abs(c - firstOpen.col)) > 1) {
+				tmp.push_back({r, c});
+			}
+			// tmp.push_back({r, c});
 		}
 	}
+	printf ("TMP size: %d\n", tmp.size());
 	std::shuffle(tmp.begin(), tmp.end(), std::default_random_engine(time(0)));
 	printf("Mines: \n");
 	for (int i = 0; i < numMines; i ++) {
@@ -37,12 +43,60 @@ void Game::randomize() {
 	}
 }
 
+// open all cell around current cell if player mask enough flag
+void Game::autoOpen(Position pos) {
+	if (getCellStatus(pos) != CellStatus::OPENDED) return;
+	int cnt = 0;
+	for (int i = -1; i <= 1; i ++) {
+		for (int j = -1; j <= 1; j ++) {
+			int x2 = pos.row + i;
+			int y2 = pos.col + j;
+			Position pos2 = {x2, y2};
+			if (isValidPos(pos2) && getCellStatus(pos2) == CellStatus::MASKED) {
+				cnt ++;
+			}
+		}
+	}
+
+	// khong du dieu kien
+	if (cnt != getNumber(pos)) return;
+	for (int i = -1; i <= 1; i ++) {
+		for (int j = -1; j <= 1; j ++) {
+			int x2 = pos.row + i;
+			int y2 = pos.col + j;
+			Position pos2 = {x2, y2};
+			if (isValidPos(pos2) && getCellStatus(pos2) == CellStatus::CLOSED) {
+				openCell(pos2);
+			}
+		}
+	}
+}
+
 // Mở một ô nếu không bị cắm cờ. 
 void Game::openCell(Position pos) {
+	// invalid position case
+	if (pos.col < 0 || pos.row < 0 || pos.col >= nCol || pos.row >= nRow) {
+		return;
+	}
 	if (getCellStatus(pos) == CellStatus::CLOSED) {
+		if (! started) {
+			printf ("Game start!");
+			started = true;
+			randomize(pos);
+		}
 		setCellStatus(pos, CellStatus::OPENDED);
+		if (getNumber(pos) == 0) {
+			for (int i = -1; i <= 1; i ++) {
+				for (int j = -1; j <= 1; j ++) {
+					if (i != 0 || j != 0) {
+						int x2 = pos.row + i;
+						int y2 = pos.col + j;
+						openCell({x2, y2});
+					}
+				}
+			}
+		}
 		// if chua item 
-		
 	}
 }
 

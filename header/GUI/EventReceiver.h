@@ -13,6 +13,7 @@ public:
     virtual bool isInRect(int x, int y){};
     void setHandleLeftClick(std::function<void()> f) {handleLeftClick = f; }
     void setHandleRightClick(std::function<void()> f) {handleRightClick = f; }
+    void setHandleMiddleClick(std::function<void()> f) {handleMiddleClick = f; }
 
 protected:
     SDL_Renderer* renderer;
@@ -20,6 +21,7 @@ protected:
     bool enable = true;
     std::function<void()> handleLeftClick;
     std::function<void()> handleRightClick;
+    std::function<void()> handleMiddleClick;
     SDL_Color color;
 
 public:
