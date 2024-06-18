@@ -17,6 +17,15 @@
 const int SCREEN_WIDTH = 640;
 const int SCREEN_HEIGHT = 480;
 
+Minesweeper *Minesweeper::instance = NULL;
+
+Minesweeper *Minesweeper::getInstance() {
+	if (instance == NULL) {
+		instance = new Minesweeper();
+	}
+	return instance;
+}
+
 bool Minesweeper::init()
 {
 	//Initialization flag
@@ -64,8 +73,8 @@ void Minesweeper::exit()
 void Minesweeper::start() {
 	// window = new Window("TITLE", SCREEN_WIDTH, SCREEN_HEIGHT);
 	window = new WindowGame(GameEasy::getInstance());
-	gameController = GameController::getInstance();
-	gameController->setWindowGame((WindowGame*) window);
+	controller = GameController::getInstance();
+	((GameController *) controller)->setWindowGame((WindowGame*) window);
 	printf("cpn size: %d\n", window->getComponents()->size());
 
 	// printf("%d\n", ((WindowGame*) window)->getGame());
@@ -94,7 +103,7 @@ void Minesweeper::start() {
 					window->handleEvent(&e);
 				}
 			}
-			gameController->updateGUI();
+			controller->updateGUI();
 			window->clearScreen();
 			window->render();
 			SDL_RenderPresent(window->getRenderer());
@@ -116,7 +125,7 @@ int main( int argc, char* args[] )
 	} else {
 
 		try {
-			game = new Minesweeper();
+			game = Minesweeper::getInstance();
 			//Start up SDL and create window
 			if(! game->init())
 			{

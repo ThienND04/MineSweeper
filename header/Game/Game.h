@@ -66,12 +66,13 @@ public:
         return boardStatus;
     }
 
-    GameStatus getGameStatus() const {
+    GameStatus getGameStatus() {
+        updateGameStatus();
         return gameStatus;
     }
 
     void setGameStatus(GameStatus gameStatus) {
-        gameStatus = gameStatus;
+        this->gameStatus = gameStatus;
     }
 
     int getNumMines() const {

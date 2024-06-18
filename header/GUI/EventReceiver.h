@@ -2,36 +2,27 @@
 #define EVENT_RECEIVER_H
 
 #include <SDL.h>
+#include <iostream>
+#include <functional>
 
 class EventReceiver {
 public: 
-    virtual bool handleEvent(SDL_Event *event) {
-        return false;
-    }
-
+    EventReceiver(SDL_Renderer *renderer);
+    bool handleEvent(SDL_Event *event);
     virtual void render() {}
     virtual bool isInRect(int x, int y){};
+    void setHandleLeftClick(std::function<void()> f) {handleLeftClick = f; }
+    void setHandleRightClick(std::function<void()> f) {handleRightClick = f; }
 
-private:
-    char* text = "";
-    SDL_Color textColor;
-    bool textVisible = true;
+protected:
+    SDL_Renderer* renderer;
     bool visible = true;
+    bool enable = true;
+    std::function<void()> handleLeftClick;
+    std::function<void()> handleRightClick;
+    SDL_Color color;
 
 public:
-    void setText(char* text, SDL_Color textColor) {
-        this->text = text;
-        this->textColor = textColor;
-    }
-
-    void setText(char* text) {
-        this->text = text;
-    }
-
-    void setTextColor(SDL_Color textColor) {
-        this->textColor = textColor;
-    }
-
     void setVisible(bool visible) {
         this -> visible = visible;
     }
@@ -40,13 +31,15 @@ public:
         return visible;
     }
 
-    void setTextVisible(bool textVisible) {
-        this-> textVisible = textVisible;
+    bool isEnable() {
+        return enable;
     }
 
-    bool isTextVisible() {
-        return textVisible;
+    void setEnable(bool enable) {
+        this -> enable = enable;
     }
+
+    void setColor(SDL_Color color) {this->color = color; }
 };
 
 #endif
