@@ -22,6 +22,7 @@ public:
 
     void updateGUI ();
     bool createComponents();
+    void free();
 
 private:
     void createCells();
@@ -35,6 +36,8 @@ private:
     Box *mine = NULL;
     Text *numFlags = NULL;
     Text *gameStatus = NULL;
+    Text *time = NULL;
+    Button *playAgain = NULL;
 
 public:
     void setWindowGame(WindowGame *windowGame);

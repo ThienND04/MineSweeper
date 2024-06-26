@@ -8,6 +8,7 @@
 class EventReceiver {
 public: 
     EventReceiver(SDL_Renderer *renderer);
+    // ~EventReceiver();
     bool handleEvent(SDL_Event *event);
     virtual void render() {}
     virtual bool isInRect(int x, int y){};
@@ -19,9 +20,9 @@ protected:
     SDL_Renderer* renderer;
     bool visible = true;
     bool enable = true;
-    std::function<void()> handleLeftClick;
-    std::function<void()> handleRightClick;
-    std::function<void()> handleMiddleClick;
+    std::function<void()> handleLeftClick = NULL;
+    std::function<void()> handleRightClick = NULL;
+    std::function<void()> handleMiddleClick = NULL;
     SDL_Color color;
 
 public:

@@ -12,7 +12,9 @@ Text::Text(SDL_Renderer *renderer, SDL_Rect rect) :
 }
 
 Text::~Text() {
-    
+    printf ("Delocating text\n");
+    delete text;
+    text = NULL;
 }
 
 
@@ -24,7 +26,7 @@ void Text::render() {
 
 void Text::setText(std::string text, SDL_Color textColor) {
     if (this->text != NULL) {
-        this->text->free();
+        delete this->text;
     }
     this->strText = text;
     this->color = textColor;

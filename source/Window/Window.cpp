@@ -1,8 +1,12 @@
 #include "Window.h"
 
 Window::Window(const char* title, int width, int height) {
+	this->width = width;
+	this->height = height;
     window = SDL_CreateWindow( title, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, SDL_WINDOW_SHOWN);
 	renderer = SDL_CreateRenderer( window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC );
+	windowID = SDL_GetWindowID(window);
+    shown = true;
 	components.clear();
     SDL_SetRenderDrawColor( renderer, 0xFF, 0xFF, 0xFF, 0xFF );	
 }
@@ -27,6 +31,7 @@ void Window::clearScreen() {
 }
 
 void Window::handleEvent(SDL_Event* event) {
+
 	int mouseX, mouseY;
 	SDL_GetMouseState(&mouseX, &mouseY);
 

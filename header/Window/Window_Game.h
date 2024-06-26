@@ -9,14 +9,11 @@
 
 class WindowGame : public Window {
 public:
-    static WindowGame *getInstance();
-
     WindowGame(Game *game);
     ~WindowGame();
 
 private:
     int gridSize;
-    static WindowGame *instance;
     Game *game;
 
 public:

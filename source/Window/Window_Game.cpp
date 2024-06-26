@@ -1,14 +1,5 @@
 #include <Window_Game.h>
 
-WindowGame* WindowGame::instance = NULL;
-
-WindowGame *WindowGame::getInstance() {
-    if (instance == NULL) {
-        
-    }
-    return instance;
-}
-
 WindowGame::WindowGame(Game *game) : 
     Window("Game", game->getNCol() * GRID_SIZE_DF + MENU_SIZE_WIDTH, game->getNRow() * GRID_SIZE_DF) 
 {

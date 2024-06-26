@@ -19,10 +19,18 @@ public:
     SDL_Renderer* getRenderer() const { return renderer; }
     std::vector<EventReceiver*> *getComponents() { return &components; };
 
+    int getWidth() {return width; }
+    int getHeight() {return height; }
+
 private:
     SDL_Window* window = NULL;
     SDL_Renderer* renderer = NULL;
     std::vector<EventReceiver*> components;
+    int windowID;
+    int width;
+    int height;
+
+    bool shown;
 };
 
 #endif

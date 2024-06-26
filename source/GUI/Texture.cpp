@@ -12,7 +12,10 @@ Texture::Texture(SDL_Renderer *renderer)
 Texture::~Texture()
 {
 	//Deallocate
+	printf("delocating texture\n");
 	free();
+	renderer = NULL;
+	font = NULL;
 }
 
 bool Texture::loadFromFile( std::string path )

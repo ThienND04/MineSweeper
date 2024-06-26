@@ -5,6 +5,11 @@
 #include <GameController.h>
 #include <Window.h>
 #include <Window_Result.h>
+#include <Window_Start.h>
+#include <ControllerStart.h>
+#include <Windows.h>
+#include <exception>
+#include <utils.h>
 
 class Minesweeper{
 public:
@@ -19,17 +24,10 @@ public:
 
 private:
     static Minesweeper *instance;
-    Window* window = NULL;
-    Controller *controller = NULL;
+    std::vector<Window *> windows;
+    std::vector<Controller *> controllers;
 
-public: 
-    void setWindow(Window *Window) {
-        this -> window = window;
-    }
-
-    void setController(Controller *controller) {
-        this -> controller = controller;
-    }
+    void initWindows();
 };
 
 #endif

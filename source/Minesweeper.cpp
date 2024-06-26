@@ -72,43 +72,51 @@ void Minesweeper::exit()
 
 void Minesweeper::start() {
 	// window = new Window("TITLE", SCREEN_WIDTH, SCREEN_HEIGHT);
-	window = new WindowGame(GameEasy::getInstance());
-	controller = GameController::getInstance();
-	((GameController *) controller)->setWindowGame((WindowGame*) window);
-	printf("cpn size: %d\n", window->getComponents()->size());
+	// window = new WindowGame(GameEasy::getInstance());
+	// controller = GameController::getInstance();
+	// ((GameController *) controller)->setWindowGame((WindowGame*) window);
+	// Timer::getInstance()->start();
 
-	// printf("%d\n", ((WindowGame*) window)->getGame());
-	printf("WindowGameAdd: %p\n", ((WindowGame*) window)->getGame());
-	printf("Instance add: %p\n", GameEasy::getInstance());
-	if (((WindowGame*) window)->getGame() == GameEasy::getInstance()) {
-		printf("Same\n");
-	} else printf("Diff\n");
-	printf("Window size: %d %d\n", ((WindowGame*) window)->getGame()->getNRow(), ((WindowGame*) window)->getGame()->getNCol());
-		//Main loop flag
-		bool quit = false;
-		//Event handler
-		SDL_Event e;
-		//While application is running
-		while( !quit )
-		{
-			
-			//Handle events on queue
-			while( SDL_PollEvent( &e ) != 0)
-			{
-				//User requests quit
-				if( e.type == SDL_QUIT )
-				{
-					quit = true;
-				} else {
-					window->handleEvent(&e);
-				}
-			}
-			controller->updateGUI();
-			window->clearScreen();
-			window->render();
-			SDL_RenderPresent(window->getRenderer());
-			SDL_Delay(1000/60);
-		}
+	// printf("A: %d\n", controller);
+	
+	// //Main loop flag
+	// bool quit = false;
+	// //Event handler
+	// SDL_Event e;
+	// //While application is running
+	// while( !quit )
+	// {
+		
+	// 	//Handle events on queue
+	// 	while( SDL_PollEvent( &e ) != 0)
+	// 	{
+	// 		//User requests quit
+	// 		if( e.type == SDL_QUIT )
+	// 		{
+	// 			quit = true;
+	// 		} else {
+	// 			window->handleEvent(&e);
+	// 		}
+	// 	}
+	// 	Timer::getInstance()->update();
+	// 	// controller->updateGUI();
+	// 	window->clearScreen();
+	// 	window->render();
+	// 	SDL_RenderPresent(window->getRenderer());
+	// 	SDL_Delay(1000/FPS);
+	// }
+}
+
+void Minesweeper::initWindows() {
+	windows.resize(WINDOWS::WINDOW_TOTALS);
+	controllers.resize(WINDOWS::WINDOW_TOTALS);
+
+	windows[WINDOWS::WINDOW_START] = WindowStart::getInstance();
+	controllers[WINDOWS::WINDOW_START] = ControllerStart::getInstance();
+
+	windows[WINDOWS::WINDOW_GAME_EASY] = new WindowGame(GameEasy::getInstance());
+	controllers[WINDOWS::WINDOW_GAME_EASY] = GameController::getInstance();
+	((GameController*) controllers[WINDOWS::WINDOW_GAME_EASY])->setWindowGame((WindowGame *)windows[WINDOWS::WINDOW_GAME_EASY]);
 }
 
 int main( int argc, char* args[] )
@@ -123,7 +131,6 @@ int main( int argc, char* args[] )
 		printf("Test\n");
 		mainTest();
 	} else {
-
 		try {
 			game = Minesweeper::getInstance();
 			//Start up SDL and create window
@@ -138,12 +145,12 @@ int main( int argc, char* args[] )
 			}
 			//Free resources and close SDL
 			game->exit();
-		} catch (std::exception e) {
+		} catch (...) {
 			printf ("Error: %s\n", SDL_GetError());
-		}
+		} 
 	}
 
 	if (game != NULL) game->exit();
-
+	
 	return 0;
 }

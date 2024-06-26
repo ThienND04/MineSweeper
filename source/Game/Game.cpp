@@ -123,6 +123,7 @@ void Game::updateGameStatus() {
 				cntOpen ++;
 				if (getCellType(pos) == CellType::MINE_CELL) {
 					setGameStatus(GameStatus::GAME_OVER);
+					return;
 				} 
 			}
 			// if (getCellStatus(pos) == CellStatus::OPENDED) {

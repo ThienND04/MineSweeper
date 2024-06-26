@@ -9,7 +9,7 @@ public:
     virtual void updateGUI ();
     virtual bool createComponents();
 
-private:
+protected:
     Window *window = NULL;
 };
 

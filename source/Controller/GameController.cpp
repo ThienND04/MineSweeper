@@ -9,12 +9,13 @@ GameController *GameController::getInstance() {
     return instance;
 }
 
+// remove all component of window and recreate
 bool GameController::createComponents() {
     if (game == NULL) {
         printf("Game does not set in Controller!\n");
         return false;
     } 
-    cells.clear();
+    free();
     cells.resize(game->getNRow());
     createCells();
     createMenu();
@@ -73,6 +74,24 @@ void GameController::createMenu() {
     numFlags->setText(std::to_string(game->getNumFlag()), CL_WHITE);
     numFlags->setRect({game->getNRow() * windowGame->getGridSize() + 75, 24, 25, 25});
     windowGame->getComponents()->push_back(numFlags); 
+
+    time = new Text(windowGame->getRenderer());
+    time->setRect({game->getNRow() * windowGame->getGridSize() + 75, 75, 25, 25});
+    windowGame->getComponents()->push_back(time);
+
+    playAgain = new Button(windowGame->getRenderer());
+    playAgain->setText("PLAY AGAIN", CL_RED);
+    playAgain->setColor(CL_LIGHT_GREEN);
+    playAgain->setRect({game->getNRow() * windowGame->getGridSize() + 10, 200, 200, 75});
+    playAgain->setHandleLeftClick([=](){
+        printf("PLAYAGAIN\n");
+        printf("Game status add: %d\n", gameStatus);
+        Game *game = GameController::getInstance()->getGame();
+        game->reset();
+        Timer::getInstance()->start();
+        createComponents();
+    });
+    windowGame->getComponents()->push_back(playAgain);
 }
 
 void GameController::setWindowGame(WindowGame *windowGame) {
@@ -117,14 +136,16 @@ void GameController::updateGUI() {
 
     // menu
     numFlags->setText(std::to_string(game->getNumFlag()), CL_WHITE);
+    time->setText(std::to_string(Timer::getInstance()->second()).c_str(), CL_WHITE);
     // game->updateGameStatus();
-    printf("Game status: %d\n", game->getGameStatus());
+    // printf("Game status: %d\n", game->getGameStatus());
     if (game -> getGameStatus() & GameStatus::GAME_STOP) {
         printf("Game status: %d\n", game->getGameStatus());
         // Minesweeper::getInstance() -> setWindow(new WindowResult(game));
         // Minesweeper::getInstance() -> setController(new Result)
         // exit(0);
         // Minesweeper::getInstance() -> set
+        Timer::getInstance()->pause();
         if (gameStatus == NULL) {
             gameStatus = new Text(windowGame->getRenderer());
             if (game->getGameStatus() == GameStatus::GAME_WON) {
@@ -132,7 +153,7 @@ void GameController::updateGUI() {
             } else if (game->getGameStatus() == GameStatus::GAME_OVER) {
                 gameStatus -> setText("GAME OVER", CL_RED);
             }
-            gameStatus -> setRect({game->getNRow() * windowGame->getGridSize() + 20, 75, 25, 25});
+            gameStatus -> setRect({game->getNRow() * windowGame->getGridSize() + 20, 125, 25, 25});
             windowGame -> getComponents() -> push_back(gameStatus);
         }
         for (std::vector<EventReceiver*> row: cells) {
@@ -141,4 +162,31 @@ void GameController::updateGUI() {
             }
         }
     }
+}
+
+void GameController::free() {
+    for (std::vector <EventReceiver*> vt: cells) {
+        for (EventReceiver *cell: vt) {
+            delete cell;
+        }
+        vt.clear();
+    }
+    cells.clear();
+
+    // delete menuBox;
+    // delete mine;
+    // delete numFlags;
+    printf("Game status add: %d\n", gameStatus);
+    delete gameStatus;
+    delete time;
+    delete playAgain;
+
+    windowGame->getComponents()->clear();
+
+    menuBox = NULL;
+    mine = NULL;
+    numFlags = NULL;
+    gameStatus = NULL;
+    time = NULL;
+    playAgain = NULL;
 }

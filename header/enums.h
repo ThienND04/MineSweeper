@@ -7,6 +7,8 @@
 #include <ctime>
 #include <algorithm>
 
+const std::string GAME_NAME = "MINESWEEPER REAL";
+
 struct Position{
     int row;
     int col;
@@ -41,6 +43,12 @@ enum RequestType{
     MASK_CELL,
     SCAN_CELL,
     AUTO_OPEN
+};
+
+enum WINDOWS{
+    WINDOW_START,
+    WINDOW_GAME_EASY,
+    WINDOW_TOTALS
 };
 
 struct Request
