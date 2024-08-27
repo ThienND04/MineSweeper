@@ -1,4 +1,4 @@
-#include <utils.h>
+#include <Timer.h>
 
 Timer *Timer::instance = NULL;
 
@@ -6,6 +6,7 @@ Timer *Timer::getInstance() {
     if (instance == NULL) {
         instance = new Timer();
     }
+    return instance;
 }
 
 Timer::~Timer() {

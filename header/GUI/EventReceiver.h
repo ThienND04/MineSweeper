@@ -1,7 +1,7 @@
 #ifndef EVENT_RECEIVER_H
 #define EVENT_RECEIVER_H
 
-#include <SDL.h>
+#include <SDL2/SDL.h>
 #include <iostream>
 #include <functional>
 
@@ -15,8 +15,14 @@ public:
     void setHandleLeftClick(std::function<void()> f) {handleLeftClick = f; }
     void setHandleRightClick(std::function<void()> f) {handleRightClick = f; }
     void setHandleMiddleClick(std::function<void()> f) {handleMiddleClick = f; }
+    virtual int getWidth();
+    virtual int getHeight();
+
+    void setPos(int x, int y);
 
 protected:
+    int x = 0;
+    int y = 0;
     SDL_Renderer* renderer;
     bool visible = true;
     bool enable = true;

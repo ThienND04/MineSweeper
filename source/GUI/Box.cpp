@@ -35,3 +35,8 @@ void Box::render() {
         }
     }
 }
+
+void Box::addComponent(EventReceiver *cpn) {
+    cpn->setPos(x, y);
+    components.push_back(cpn);
+}

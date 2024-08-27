@@ -7,5 +7,8 @@ WindowGame::WindowGame(Game *game) :
     setGridSize(GRID_SIZE_DF);
     TextureCreator::getInstance()->setRenderer(getRenderer());
     TextureCreator::getInstance()->setFont("fonts/open-sans/OpenSans-Bold.ttf", 24);
-    // std::vector<EventReceiver*> *components = getComponents();
+}
+
+WindowGame::~WindowGame() {
+    
 }

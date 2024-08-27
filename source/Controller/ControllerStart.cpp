@@ -22,13 +22,11 @@ bool ControllerStart::createComponents() {
     btnPlay->setText("PLAY", CL_WHITE);
     btnPlay->setRect({400, 300, 200, 50});
     btnPlay->setHandleLeftClick([=](){
-        Window *windowGame = new WindowGame(GameEasy::getInstance());
-        Controller *newController = GameController::getInstance();
-        ((GameController *) newController)->setWindowGame((WindowGame*) window);
-        Minesweeper::getInstance()->setWindow(windowGame);
-        Minesweeper::getInstance()->setController(newController);
+        Minesweeper::getInstance()->getWindows()[WINDOWS::WINDOW_START]->setShown(false);
+        Minesweeper::getInstance()->getWindows()[WINDOWS::WINDOW_GAME_EASY]->setShown(true);
     });
     window->getComponents()->push_back(btnPlay);
+    return true;
 }
 
 void ControllerStart::free() {

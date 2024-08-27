@@ -19,7 +19,7 @@ private:
 public:
     Game *getGame() {return game; };
     int getGridSize() {return gridSize; }
-    int setGridSize(int gridSize) {this->gridSize = gridSize; }
+    void setGridSize(int gridSize) {this->gridSize = gridSize; }
 };
 
 #endif

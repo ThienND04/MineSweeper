@@ -8,7 +8,7 @@ public:
     TextureCreator(TTF_Font *font);
     TextureCreator(char* path, int fontSize);
 
-    Texture *createTexture(std::string text, SDL_Color color);
+    Texture *createTexture(std::string text, SDL_Color color, SDL_Renderer *textRenderer = NULL);
 
 private:
     static TextureCreator* instance;

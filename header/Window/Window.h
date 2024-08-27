@@ -1,7 +1,7 @@
 #ifndef WINDOW_H 
 #define WINDOW_H
 
-#include<SDL.h>
+#include<SDL2/SDL.h>
 #include<stdio.h>
 #include<vector>
 #include<EventReceiver.h>
@@ -22,6 +22,9 @@ public:
     int getWidth() {return width; }
     int getHeight() {return height; }
 
+    bool isShowed() {return shown; }
+    void setShown(bool shown);
+
 private:
     SDL_Window* window = NULL;
     SDL_Renderer* renderer = NULL;
@@ -29,7 +32,6 @@ private:
     int windowID;
     int width;
     int height;
-
     bool shown;
 };
 

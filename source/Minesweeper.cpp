@@ -1,7 +1,7 @@
 //Using SDL, SDL_image, standard IO, and strings
-#include <SDL.h>
-#include <SDL_image.h>
-#include <SDL_ttf.h>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
+#include <SDL2/SDL_ttf.h>
 #include <stdio.h>
 #include <string>
 #include <Button.h>
@@ -71,40 +71,66 @@ void Minesweeper::exit()
 }
 
 void Minesweeper::start() {
-	// window = new Window("TITLE", SCREEN_WIDTH, SCREEN_HEIGHT);
-	// window = new WindowGame(GameEasy::getInstance());
-	// controller = GameController::getInstance();
-	// ((GameController *) controller)->setWindowGame((WindowGame*) window);
-	// Timer::getInstance()->start();
+	initWindows();
+	Timer::getInstance()->start();
 
-	// printf("A: %d\n", controller);
-	
-	// //Main loop flag
-	// bool quit = false;
-	// //Event handler
-	// SDL_Event e;
-	// //While application is running
-	// while( !quit )
-	// {
+	//Main loop flag
+	bool quit = false;
+	//Event handler
+	SDL_Event e;
+	//While application is running
+	while( !quit )
+	{
 		
-	// 	//Handle events on queue
-	// 	while( SDL_PollEvent( &e ) != 0)
-	// 	{
-	// 		//User requests quit
-	// 		if( e.type == SDL_QUIT )
-	// 		{
-	// 			quit = true;
-	// 		} else {
-	// 			window->handleEvent(&e);
-	// 		}
-	// 	}
-	// 	Timer::getInstance()->update();
-	// 	// controller->updateGUI();
-	// 	window->clearScreen();
-	// 	window->render();
-	// 	SDL_RenderPresent(window->getRenderer());
-	// 	SDL_Delay(1000/FPS);
-	// }
+		// Handle events on queue
+		while( SDL_PollEvent( &e ) != 0)
+		{
+			//User requests quit
+			if( e.type == SDL_QUIT )
+			{
+				quit = true;
+			} else {
+				windowsHandleEvent(&e);
+			}
+		}
+		Timer::getInstance()->update();
+		updateGUI();
+		clearScreens();
+		renderAll();
+		SDL_Delay(1000/FPS);
+	}
+}
+
+void Minesweeper::updateGUI() {
+	for (int i = 0; i < windows.size(); i ++) {
+		if (windows[i]->isShowed()){
+			controllers[i]->updateGUI();
+		}
+	}
+}
+
+void Minesweeper::windowsHandleEvent(SDL_Event *event) {
+	for (int i = 0; i < windows.size(); i ++) {
+		if (windows[i]->isShowed()) {
+			windows[i]->handleEvent(event);
+		}
+	}
+}
+
+void Minesweeper::clearScreens() {
+	for (int i = 0; i < windows.size(); i ++) {
+		if (windows[i]->isShowed()){
+			windows[i]->clearScreen();
+		}
+	}
+}
+
+void Minesweeper::renderAll() {
+	for (int i = 0; i < windows.size(); i ++) {
+		if (windows[i]->isShowed()) {
+			windows[i]->render();
+		}
+	}
 }
 
 void Minesweeper::initWindows() {
@@ -112,9 +138,11 @@ void Minesweeper::initWindows() {
 	controllers.resize(WINDOWS::WINDOW_TOTALS);
 
 	windows[WINDOWS::WINDOW_START] = WindowStart::getInstance();
+	windows[WINDOWS::WINDOW_START]->setShown(true);
 	controllers[WINDOWS::WINDOW_START] = ControllerStart::getInstance();
 
 	windows[WINDOWS::WINDOW_GAME_EASY] = new WindowGame(GameEasy::getInstance());
+	windows[WINDOWS::WINDOW_GAME_EASY]->setShown(false);
 	controllers[WINDOWS::WINDOW_GAME_EASY] = GameController::getInstance();
 	((GameController*) controllers[WINDOWS::WINDOW_GAME_EASY])->setWindowGame((WindowGame *)windows[WINDOWS::WINDOW_GAME_EASY]);
 }
@@ -123,7 +151,7 @@ int main( int argc, char* args[] )
 {
 	srand(time(0));
 	FILE *LOG = freopen("log.txt", "w", stdout);
-	printf ("start\n");
+	printf ("start hehe\n");
 	Minesweeper *game = NULL;
 
 	printf("Arg[1]: %s\n", args[1]);

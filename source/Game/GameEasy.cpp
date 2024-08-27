@@ -11,9 +11,9 @@ GameEasy *GameEasy::getInstance() {
         printf("create instance\n");
         instance = new GameEasy(N_ROW, N_COL, N_MINES);
     }
-    int r = instance->getNRow(), c = instance->getNCol();
-    // printf("Game size: %d %d\n", r, c);
-    printf("Instance add: %p\n", instance);
+    // int r = instance->getNRow(), c = instance->getNCol();
+    // // printf("Game size: %d %d\n", r, c);
+    // printf("Instance add: %p\n", instance);
     return instance;
 }
 

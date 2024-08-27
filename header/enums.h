@@ -2,7 +2,7 @@
 #define ENUMS_H
 
 #include<iostream>
-#include <SDL.h>
+#include <SDL2/SDL.h>
 #include <random>
 #include <ctime>
 #include <algorithm>

@@ -3,6 +3,9 @@
 
 #include <EventReceiver.h>
 #include <vector>
+#include <iostream>
+#include <Button.h>
+// #include <typeinfo>
 
 class Box : public EventReceiver{
 public:
@@ -12,7 +15,9 @@ public:
     virtual void render() override;
     void setRect(SDL_Rect rect) {this->rect = rect; }
 
-private:
+protected:
+    void addComponent(EventReceiver *cpn);
+
     SDL_Rect rect {0, 0, 50, 50};
     bool isWithinBounds();
     std::vector<EventReceiver *> components;

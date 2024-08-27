@@ -5,6 +5,7 @@ WindowStart *WindowStart::instance = NULL;
 WindowStart *WindowStart::getInstance() {
     if (instance == NULL) {
         instance = new WindowStart();
+        instance->setShown(true);
     }
     return instance;
 }

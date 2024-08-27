@@ -1,10 +1,10 @@
 #ifndef TEXTURE_H
 #define TEXTURE_H
 
-#include <SDL.h>
+#include <SDL2/SDL.h>
 #include <iostream>
-#include <SDL_ttf.h>
-#include <SDL_image.h>
+#include <SDL2/SDL_ttf.h>
+#include <SDL2/SDL_image.h>
 
 class Texture {
 public:

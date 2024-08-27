@@ -41,3 +41,12 @@ void Window::handleEvent(SDL_Event* event) {
 		}
 	}
 }
+
+void Window::setShown(bool shown) {
+	if (shown) {
+		SDL_ShowWindow(this->window);
+	} else {
+		SDL_HideWindow(this->window);
+	}
+	this->shown = shown;
+}

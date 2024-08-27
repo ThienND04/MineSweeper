@@ -6,6 +6,7 @@ TextureCreator *TextureCreator::getInstance() {
     if (instance == NULL) {
         instance = new TextureCreator();
     }
+    return instance;
 }
 
 TextureCreator::TextureCreator() {};
@@ -42,8 +43,13 @@ bool TextureCreator::setSize(int size) {
     return success;
 }
 
-Texture *TextureCreator::createTexture(std::string text, SDL_Color color) {
-    Texture *texture = new Texture(renderer);
+Texture *TextureCreator::createTexture(std::string text, SDL_Color color, SDL_Renderer *textRenderer) {
+    Texture *texture = NULL;
+    if (textRenderer == NULL) {
+        texture = new Texture(renderer);
+    } else {
+        texture = new Texture(textRenderer);
+    }
     texture->setFont(font);
     if( ! texture->loadFromRenderedText(text, color)) {
         printf("Failed to render text\n");

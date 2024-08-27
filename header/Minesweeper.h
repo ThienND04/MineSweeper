@@ -7,9 +7,9 @@
 #include <Window_Result.h>
 #include <Window_Start.h>
 #include <ControllerStart.h>
-#include <Windows.h>
+// #include <Windows.h>
 #include <exception>
-#include <utils.h>
+#include <Timer.h>
 
 class Minesweeper{
 public:
@@ -21,6 +21,9 @@ public:
     void start();
 
     static Minesweeper *getInstance();
+    // can not add and remove window
+    std::vector<Window *> getWindows() {return windows; }
+    std::vector<Controller *> getControllers() {return controllers; }
 
 private:
     static Minesweeper *instance;
@@ -28,6 +31,10 @@ private:
     std::vector<Controller *> controllers;
 
     void initWindows();
+    void windowsHandleEvent(SDL_Event *event);
+    void clearScreens();
+    void renderAll();
+    void updateGUI();
 };
 
 #endif

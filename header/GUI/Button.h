@@ -1,7 +1,7 @@
 #ifndef BUTTON_H
 #define BUTTON_H
 
-#include<SDL.h>
+#include<SDL2/SDL.h>
 #include "EventReceiver.h"
 #include <functional>
 #include <iostream>
@@ -20,6 +20,8 @@ public:
     void setHoverColor(SDL_Color color) {this->hoverColor = color; }
     void setRect(SDL_Rect rect) {this->rect = rect; }
     void setText(std::string text, SDL_Color textColor);
+    int getWidth() {return rect.w; }
+    int getHeight() {return rect.h; }
 
 private:
     Texture* text = NULL;
