@@ -73,6 +73,14 @@ void GameController::createMenu() {
     numFlags->setText(std::to_string(game->getNumFlag()), CL_WHITE);
     numFlags->setRect({game->getNRow() * windowGame->getGridSize() + 75, 24, 25, 25});
     windowGame->getComponents()->push_back(numFlags); 
+
+    playAgainButton = new Button(windowGame->getRenderer(), {game->getNRow() * windowGame->getGridSize() + 20, 75, 200, 25});
+    playAgainButton->setColor(CL_RED);
+    playAgainButton->setText("Play Again", CL_WHITE);
+    playAgainButton->setHandleLeftClick([=]() {
+        GameController::getInstance()->getGame()->reset();
+    });
+    windowGame->getComponents()->push_back(playAgainButton);
 }
 
 void GameController::setWindowGame(WindowGame *windowGame) {

@@ -12,13 +12,13 @@ bool EventReceiver::handleEvent(SDL_Event *event) {
         printf ("Handling button click\n");
         switch (event->button.button) {
             case (SDL_BUTTON_LEFT):
-                handleLeftClick();
+                if (handleLeftClick != NULL) handleLeftClick();
                 break;
             case (SDL_BUTTON_RIGHT):
-                handleRightClick();
+                if (handleRightClick != NULL) handleRightClick();
                 break;
             case (SDL_BUTTON_MIDDLE):
-                handleMiddleClick();
+                if (handleMiddleClick != NULL) handleMiddleClick();
                 break;
         }
     }

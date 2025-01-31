@@ -75,40 +75,39 @@ void Minesweeper::start() {
 	window = new WindowGame(GameEasy::getInstance());
 	controller = GameController::getInstance();
 	((GameController *) controller)->setWindowGame((WindowGame*) window);
-	printf("cpn size: %d\n", window->getComponents()->size());
+	// printf("cpn size: %d\n", window->getComponents()->size());
 
 	// printf("%d\n", ((WindowGame*) window)->getGame());
-	printf("WindowGameAdd: %p\n", ((WindowGame*) window)->getGame());
-	printf("Instance add: %p\n", GameEasy::getInstance());
-	if (((WindowGame*) window)->getGame() == GameEasy::getInstance()) {
-		printf("Same\n");
-	} else printf("Diff\n");
-	printf("Window size: %d %d\n", ((WindowGame*) window)->getGame()->getNRow(), ((WindowGame*) window)->getGame()->getNCol());
-		//Main loop flag
-		bool quit = false;
-		//Event handler
-		SDL_Event e;
-		//While application is running
-		while( !quit )
+	// printf("WindowGameAdd: %p\n", ((WindowGame*) window)->getGame());
+	// printf("Instance add: %p\n", GameEasy::getInstance());
+	// if (((WindowGame*) window)->getGame() == GameEasy::getInstance()) {
+	// 	printf("Same\n");
+	// } else printf("Diff\n");
+	// printf("Window size: %d %d\n", ((WindowGame*) window)->getGame()->getNRow(), ((WindowGame*) window)->getGame()->getNCol());
+	//Main loop flag
+	bool quit = false;
+	//Event handler
+	SDL_Event e;
+	//While application is running
+	while( !quit )
+	{
+		//Handle events on queue
+		while( SDL_PollEvent( &e ) != 0)
 		{
-			
-			//Handle events on queue
-			while( SDL_PollEvent( &e ) != 0)
+			//User requests quit
+			if( e.type == SDL_QUIT )
 			{
-				//User requests quit
-				if( e.type == SDL_QUIT )
-				{
-					quit = true;
-				} else {
-					window->handleEvent(&e);
-				}
+				quit = true;
+			} else {
+				window->handleEvent(&e);
 			}
-			controller->updateGUI();
-			window->clearScreen();
-			window->render();
-			SDL_RenderPresent(window->getRenderer());
-			SDL_Delay(1000/60);
 		}
+		controller->updateGUI();
+		window->clearScreen();
+		window->render();
+		SDL_RenderPresent(window->getRenderer());
+		SDL_Delay(1000/60);
+	}
 }
 
 int main( int argc, char* args[] )
@@ -139,6 +138,7 @@ int main( int argc, char* args[] )
 			//Free resources and close SDL
 			game->exit();
 		} catch (std::exception e) {
+			printf ("Error: %s\n", e.what());
 			printf ("Error: %s\n", SDL_GetError());
 		}
 	}
