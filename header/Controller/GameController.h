@@ -35,6 +35,7 @@ private:
     Box *mine = NULL;
     Text *numFlags = NULL;
     Text *gameStatus = NULL;
+    Button *playAgainButton = NULL;
 
 public:
     void setWindowGame(WindowGame *windowGame);

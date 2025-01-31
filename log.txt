@@ -2,173 +2,1804 @@ start
 Arg[1]: (null)
 Success
 create instance
-Instance add: 00000000010d6590
+Instance add: 0000000002662630
 Success load font.
 set window game in controller
 Grid size: 30
 seted window game in controller
-cpn size: 103
-WindowGameAdd: 00000000010d6590
-Instance add: 00000000010d6590
-Instance add: 00000000010d6590
-Instance add: 00000000010d6590
+cpn size: 104
+WindowGameAdd: 0000000002662630
+Instance add: 0000000002662630
+Instance add: 0000000002662630
+Instance add: 0000000002662630
 Same
 Window size: 10 10
 Handling button event
 512
+2
 Handling button event
 512
+2
 Handling button event
 770
+2
 Handling button event
 512
+2
 Game status: 1
+3
+4
+5
 Game status: 1
+3
+4
+5
 Game status: 1
+3
+4
+5
 Game status: 1
+3
+4
+5
 Game status: 1
+3
+4
+5
 Game status: 1
+3
+4
+5
 Game status: 1
+3
+4
+5
 Game status: 1
+3
+4
+5
 Game status: 1
+3
+4
+5
 Game status: 1
+3
+4
+5
 Game status: 1
+3
+4
+5
 Game status: 1
+3
+4
+5
 Game status: 1
+3
+4
+5
 Game status: 1
+3
+4
+5
 Game status: 1
+3
+4
+5
 Game status: 1
+3
+4
+5
 Game status: 1
+3
+4
+5
 Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
+3
+4
+5
 Handling button event
 512
+2
 Handling button event
 1024
+2
 Game status: 1
+3
+4
+5
 Handling button event
 1024
+2
 Game status: 1
-Game status: 1
+3
+4
+5
 Handling button event
 1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Handling button event
+1025
+2
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Handling button event
+1026
+Handling button click
+2
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Handling button event
+1025
+Handling button event
+1025
+2
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Handling button event
+1026
+Handling button click
+Handling button event
+1026
+Handling button click
+2
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Handling button event
+1025
+2
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Handling button event
+1026
+Handling button click
+Game start!TMP size: 91
+Mines: 
+    0 2
+    2 7
+    4 0
+    0 8
+    7 1
+    3 0
+    7 0
+    1 7
+    9 0
+    8 8
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Handling button event
+1025
+Handling button event
+1025
+2
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Handling button event
+1026
+Handling button click
+Handling button event
+1026
+Handling button click
+2
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Handling button event
+1025
+2
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Handling button event
+1026
+Handling button click
+Game start!TMP size: 91
+Mines: 
+    1 3
+    2 7
+    6 1
+    3 0
+    5 8
+    1 8
+    8 0
+    8 9
+    6 3
+    0 8
+2
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1025
+Handling button event
+1025
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1026
+Handling button click
+Handling button event
+1026
+Handling button click
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Handling button event
+1025
+2
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Handling button event
+1026
+Handling button click
+2
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
+Game status: 1
+3
+4
+5
+Handling button event
+1024
+2
 Handling button event
 512
+2
 Game status: 1
+3
+4
+5
 Game status: 1
+3
+4
+5
 Game status: 1
+3
+4
+5
 Game status: 1
+3
+4
+5
 Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
+Game status: 1
+3
+4
+5
 Handling button event
 512
-Handling button event
-1024
+2
 Game status: 1
-Handling button event
-1024
-Game status: 1
-Handling button event
-1024
-Game status: 1
-Handling button event
-1024
-Game status: 1
-Handling button event
-1024
-Game status: 1
-Handling button event
-1024
-Game status: 1
-Handling button event
-1024
-Game status: 1
-Handling button event
-1024
-Game status: 1
-Handling button event
-1024
-Game status: 1
-Handling button event
-1024
-Game status: 1
-Handling button event
-1024
-Game status: 1
-Handling button event
-1024
-Game status: 1
-Handling button event
-1024
-Game status: 1
-Handling button event
-1024
-Handling button event
-512
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Game status: 1
-Handling button event
-512
-Game status: 1
+3
+4
+5

@@ -19,9 +19,9 @@ protected:
     SDL_Renderer* renderer;
     bool visible = true;
     bool enable = true;
-    std::function<void()> handleLeftClick;
-    std::function<void()> handleRightClick;
-    std::function<void()> handleMiddleClick;
+    std::function<void()> handleLeftClick = NULL;
+    std::function<void()> handleRightClick = NULL;
+    std::function<void()> handleMiddleClick = NULL;
     SDL_Color color;
 
 public:
