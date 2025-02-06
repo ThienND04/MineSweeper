@@ -12,6 +12,7 @@
 #include <GameEasy.h>
 #include <MainTest.h>
 #include <cstring>
+#include <Window_Start.h>
 
 //Screen dimension constants
 const int SCREEN_WIDTH = 640;
@@ -71,19 +72,11 @@ void Minesweeper::exit()
 }
 
 void Minesweeper::start() {
-	// window = new Window("TITLE", SCREEN_WIDTH, SCREEN_HEIGHT);
-	window = new WindowGame(GameEasy::getInstance());
-	controller = GameController::getInstance();
-	((GameController *) controller)->setWindowGame((WindowGame*) window);
-	// printf("cpn size: %d\n", window->getComponents()->size());
+	TextureCreator::getInstance()->setFont("fonts/lazy/lazy.ttf", 20);
+	setWindow(WindowStart::getInstance());
+	setController(GameController::getInstance());
+	window->createComponents();
 
-	// printf("%d\n", ((WindowGame*) window)->getGame());
-	// printf("WindowGameAdd: %p\n", ((WindowGame*) window)->getGame());
-	// printf("Instance add: %p\n", GameEasy::getInstance());
-	// if (((WindowGame*) window)->getGame() == GameEasy::getInstance()) {
-	// 	printf("Same\n");
-	// } else printf("Diff\n");
-	// printf("Window size: %d %d\n", ((WindowGame*) window)->getGame()->getNRow(), ((WindowGame*) window)->getGame()->getNCol());
 	//Main loop flag
 	bool quit = false;
 	//Event handler
@@ -102,7 +95,8 @@ void Minesweeper::start() {
 				window->handleEvent(&e);
 			}
 		}
-		controller->updateGUI();
+		// controller->updateGUI();
+		// printf("Game easy button event: %d\n",  (window->getComponents()->at(1)->handleLeftClick.operator bool()));
 		window->clearScreen();
 		window->render();
 		SDL_RenderPresent(window->getRenderer());

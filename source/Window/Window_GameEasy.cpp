@@ -2,9 +2,9 @@
 
 WindowGameEasy* WindowGameEasy::instance = NULL;
 
-WindowGameEasy WindowGameEasy::getInstance() {
+WindowGameEasy *WindowGameEasy::getInstance() {
     if (instance == NULL) {
         
     }
-    return *instance;
+    return instance;
 }

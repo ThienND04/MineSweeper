@@ -12,6 +12,14 @@ Button::Button(SDL_Renderer *renderer, SDL_Rect rect) :
     this->rect = rect;
 }
 
+Button::Button(SDL_Renderer *renderer, std::string text, SDL_Color textColor, SDL_Rect rect, SDL_Color color, SDL_Color hover) : 
+    EventReceiver(renderer) {
+    setRect(rect);
+    setText(text, textColor);
+    setColor(color);
+    setHoverColor(hover);
+}
+
 Button::~Button() {
     
 }

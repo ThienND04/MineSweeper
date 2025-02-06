@@ -68,5 +68,6 @@
         "xutility": "cpp",
         "iomanip": "cpp",
         "optional": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "enabled"
 }

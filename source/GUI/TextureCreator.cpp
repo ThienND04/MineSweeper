@@ -24,6 +24,7 @@ bool TextureCreator::setFont(char* path, int fontSize) {
         font = TTF_OpenFont(path, fontSize);
         success = true;
         if(font != NULL) printf("Success load font.\n");
+        else printf("Failed to load font.\n");
     } catch (std::exception e) {
         printf ("Can not load %s font. Error: %s\n", path, TTF_GetError());
     }

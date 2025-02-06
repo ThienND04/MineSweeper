@@ -4,7 +4,7 @@ WindowGame* WindowGame::instance = NULL;
 
 WindowGame *WindowGame::getInstance() {
     if (instance == NULL) {
-        
+        // instance = new WindowGame(new Game());
     }
     return instance;
 }

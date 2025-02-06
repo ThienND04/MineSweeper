@@ -5,7 +5,7 @@
 
 class WindowGameEasy : public WindowGame {
 public:
-    static WindowGameEasy getInstance();
+    static WindowGameEasy* getInstance();
 
 private:
     static WindowGameEasy* instance;

@@ -61,6 +61,7 @@ const SDL_Color CL_BLACK = {0, 0, 0, 255};
 const SDL_Color CL_RED = {255, 0, 0, 255};
 const SDL_Color CL_PURPLE = {128, 0, 128, 255};
 const SDL_Color CL_PALE_GREEN = {152,251,152, 255};
+const SDL_Color CL_GRAY = {128,128,128, 255};
         
 
 // size of grid

@@ -23,8 +23,13 @@ private:
     Controller *controller = NULL;
 
 public: 
-    void setWindow(Window *Window) {
+    void setWindow(Window *window) {
+        printf("Setting window\n");
+        if (this->window != NULL) delete this->window;
+        
+        printf("Deleted window\n");
         this -> window = window;
+        TextureCreator::getInstance()->setRenderer(window->getRenderer());
     }
 
     void setController(Controller *controller) {

@@ -12,6 +12,7 @@ public:
     ~Window();
     
     virtual void render();
+    virtual void createComponents() {}
     virtual void handleEvent(SDL_Event* event);
     void clearScreen();
 

@@ -15,7 +15,7 @@ public:
     void setHandleRightClick(std::function<void()> f) {handleRightClick = f; }
     void setHandleMiddleClick(std::function<void()> f) {handleMiddleClick = f; }
 
-protected:
+public:
     SDL_Renderer* renderer;
     bool visible = true;
     bool enable = true;
